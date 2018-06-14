@@ -1,0 +1,113 @@
+<DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>movie counter</title>
+<style>
+ .table{
+          boarder:1px solid black;
+		  padding:5px;
+		  boarder-spacing:5px;
+ .left{
+        text-allign:centre;
+		width:100px;
+		height:150px;
+		background-colour:lightgreen;
+		}
+ .xyz{
+      width:5px;
+	  background-color:Lightgreen;
+	  }
+ .table{
+        font-size:20px;
+		text-align:center;
+		}
+</style>
+<script>
+ function displaytext(){
+               var x=validateText();
+			   if(x==true)
+			   {
+			   document.getElementById("f").innerHTML="";
+			   document.getElementById("demo").innerHTML="ThankYou";
+			   return true;
+			   }
+			   else
+			   return false;
+			  }
+function validateText(){
+                        var name=document.getElementById("name").value;
+						var email=document.getElementById("email").value;
+						var phone=document.getElementById("phone").value;
+						var check=document.getElementById("check").value;
+						if(name==null || name=="") {alert("name cant be blank");
+						   return false;}
+						else if(email==null || email=="") {alert("!emailid provided");
+						   return false;}
+						else if(check==null || check=="") {alert("select an option");
+						   return false;}
+						return true;
+						}
+</script>
+</head>
+<body>
+ <div class="1">
+ <table class="table" style="width:100%"
+        bgcolor="red"
+		text-allign="center">
+<tr><td class="left" bgcolor="red"><h1>MANNAT NAGPAL</h1></td>
+    <td class="mid"></td>
+	<td class="xyz"><h1><img src="aa.jpeg" alt="notification" boarder=3 height=50 width=100></td></h1>
+	<td class="xyz"><img src="man1.jpeg" alt="user image" boarder=3 height=100 width=100></td>
+</tr>
+<tr height=200px><td class="left"><h2><a href="#">search link</a></h2></td>
+<td rowspan="3" colspan="3" style="text-allign:left;vertical-allign:top;padding:25px" bgcolor="lightblue"></td>
+<div id="f">
+<h2>form</h2>
+<form action="">
+<table cellspacing="50px" class="table2">
+ <tr>
+    <td>name</td>
+	<td><input id="name" type="text" placeholder="name" required></td>
+ </tr>
+ <tr>
+    <td>email</td>
+	<td><input id="email" type="email" placeholder="emailid" required></td>
+ </tr>
+ <tr>
+    <td>phone no.</td>
+	<td><input id="phone" type="number" placeholder="phone no." required></td>
+ </tr>
+ <tr>
+    <td>gender</td>
+	<td><input type="radio" name="gender" value="male" checked>male
+	<input type="radio" name="gender" value="other">other</td>
+ </tr>
+ <tr>
+ <td>no. of tickets</td>
+ <td><input type="number" placeholder="insert value" required></td>
+ </tr>
+ <tr>
+    <td>how you came to know about our website</td>
+	<td><input id="check" type="checkbox" required>through friends
+	<br><input type="checkbox">online
+	<br><input type="checkbox">newspaper
+	</td>
+ </tr>
+ <tr>
+ <td><input onclick="return displaytext()" type="button" value="submit">
+ </td>
+  </tr>
+   </table>
+   </form>
+    </div>
+	   <p id="demo"></p>
+	</td>
+	<tr height=200px><td class="left"><h2><a href="#">movie link</a></h2></td></tr>
+	<tr height=200px><td class="left"><h2><a href="#">form link</a></h2></td></tr>
+    </table>
+	</div>
+	<h2><p align="center">Form</p></h2>
+</body>
+</html>
+						
